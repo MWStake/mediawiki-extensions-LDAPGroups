@@ -5,6 +5,7 @@
 		 (tab-width . 4)
 		 (c-basic-offset . 4)
 		 (indent-tabs-mode . t)
+		 (lice:copyright-holder . "NicheWork, LLC")
 		 (lice:default-license . "gpl-3.0")
 		 (eval . (progn (when (fboundp 'delete-trailing-whitespace)
 						  (delete-trailing-whitespace))

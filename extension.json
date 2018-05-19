@@ -23,6 +23,14 @@
 	"Hooks": {
 		"UserLoggedIn": "MediaWiki\\Extension\\LDAPGroups\\Hook\\UserLoggedIn\\SyncUserGroups::callback"
 	},
+	"config_prefix": "LDAPGroups",
+	"config": {
+		"GroupRegistry": {
+			"value": [],
+			"description": "Allows registration of custom group mappings",
+			"descriptionmsg": "ldapgroups-config-registry"
+		}
+	},
 	"attributes": {
 		"LDAPProvider": {
 			"DefaultSettings": {
