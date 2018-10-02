@@ -22,12 +22,12 @@ class MappedGroups extends Base {
 		$ldapGroupMembership = $this->mapGroupsFromLDAP();
 
 		$groupsToAdd = array_diff( $ldapGroupMembership, $currentLDAPGroups );
-		foreach( $groupsToAdd as $groupToAdd ) {
+		foreach ( $groupsToAdd as $groupToAdd ) {
 			$this->addGroup( $groupToAdd );
 		}
 
 		$groupsToRemove = array_diff( $currentLDAPGroups, $ldapGroupMembership );
-		foreach( $groupsToRemove as $groupToRemove ) {
+		foreach ( $groupsToRemove as $groupToRemove ) {
 			$this->removeGroup( $groupToRemove );
 		}
 	}
@@ -54,7 +54,7 @@ class MappedGroups extends Base {
 		$ret = [];
 		foreach ( $allLDAPGroups as $dn ) {
 			if ( isset( $dnToWikiMap[$dn] ) ) {
-				$ret[] =  $dnToWikiMap[$dn];
+				$ret[] = $dnToWikiMap[$dn];
 			}
 		}
 		return $ret;

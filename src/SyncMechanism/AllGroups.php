@@ -15,16 +15,16 @@ class AllGroups extends Base {
 		$ldapGroups = $this->groupList->getShortNames();
 
 		$groupsToAdd = array_diff( $ldapGroups, $currentGroups );
-		foreach( $groupsToAdd as $groupToAdd ) {
-			if( in_array( $groupToAdd, $loacallyManagedGroups ) ) {
+		foreach ( $groupsToAdd as $groupToAdd ) {
+			if ( in_array( $groupToAdd, $loacallyManagedGroups ) ) {
 				continue;
 			}
 			$this->addGroup( $groupToAdd );
 		}
 
 		$groupsToRemove = array_diff( $currentGroups, $ldapGroups );
-		foreach( $groupsToRemove as $groupToRemove ) {
-			if( in_array( $groupToRemove, $loacallyManagedGroups ) ) {
+		foreach ( $groupsToRemove as $groupToRemove ) {
+			if ( in_array( $groupToRemove, $loacallyManagedGroups ) ) {
 				continue;
 			}
 			$this->removeGroup( $groupToRemove );

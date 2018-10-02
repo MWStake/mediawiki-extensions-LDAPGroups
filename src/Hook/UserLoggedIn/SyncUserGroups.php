@@ -34,7 +34,6 @@ class SyncUserGroups extends UserLoggedIn {
 	 * @return bool
 	 */
 	protected function doProcess() {
-
 		$process = new GroupSyncProcess( $this->user, $this->config, $this->ldapClient );
 		$process->run();
 
@@ -49,6 +48,10 @@ class SyncUserGroups extends UserLoggedIn {
 		return Config::DOMAINCONFIG_SECTION;
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	public static function getVersion() {
 		return "1.0.0-alpha";
 	}

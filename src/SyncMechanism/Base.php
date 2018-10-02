@@ -60,7 +60,7 @@ abstract class Base implements ISyncMechanism {
 	/**
 	 * Do the actual work
 	 */
-	protected abstract function doSync();
+	abstract protected function doSync();
 
 	/**
 	 *
@@ -68,7 +68,7 @@ abstract class Base implements ISyncMechanism {
 	 */
 	protected function addGroup( $group ) {
 		$success = $this->user->addGroup( $group );
-		if( !$success ) {
+		if ( !$success ) {
 			wfDebugLog(
 				"LDAPGroups addGroup",
 				"Problem adding user '{$this->user}' to the group '$group'."
@@ -82,7 +82,7 @@ abstract class Base implements ISyncMechanism {
 	 */
 	protected function removeGroup( $group ) {
 		$success = $this->user->removeGroup( $group );
-		if( !$success ) {
+		if ( !$success ) {
 			wfDebugLog(
 				"LDAPGroups removeGroup",
 				"Problem removing user '{$this->user}' from the group '$group'."
