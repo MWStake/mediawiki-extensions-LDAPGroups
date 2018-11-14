@@ -23,6 +23,7 @@ namespace MediaWiki\Extension\LDAPGroups\Hook\UserLoggedIn;
 
 use MediaWiki\Extension\LDAPGroups\Config;
 use MediaWiki\Extension\LDAPProvider\Hook\UserLoggedIn;
+use MediaWiki\Extension\LDAPGroups\GroupSyncProcess;
 
 class SyncUserGroups extends UserLoggedIn {
 
